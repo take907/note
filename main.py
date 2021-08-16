@@ -1,4 +1,3 @@
-import os
 import tkinter as tk
 import savefile
 import tkinter.font as font
@@ -54,29 +53,26 @@ filemenu = tk.Menu(menubar, tearoff=0)
 filemenu.add_command(label = "新規(N)",command=new_file)
 filemenu.add_command(label = "開く(O)...",command=open_file)
 filemenu.add_command(label = "保存(S)",command=file_save)
-filemenu.add_command(label = "名前を付けて保存(A)...")
-filemenu.add_separator()
-filemenu.add_command(label = "ページ設定(U)...")
-filemenu.add_command(label = "印刷(P)...")
+filemenu.add_command(label = "名前を付けて保存(A)...",command=file_save)
 filemenu.add_separator()
 filemenu.add_command(label = "メモ帳の終了(X)", command = root.quit)
 menubar.add_cascade(label = "ファイル(F)", menu = filemenu)
 
-editmenu = tk.Menu(menubar, tearoff=0)
-editmenu.add_command(label = "About...")
-menubar.add_cascade(label = "編集(E)", menu = editmenu)
+# editmenu = tk.Menu(menubar, tearoff=0)
+# editmenu.add_command(label = "About...")
+# menubar.add_cascade(label = "編集(E)", menu = editmenu)
 
-formatmenu = tk.Menu(menubar, tearoff = 0)
-formatmenu.add_command(label = "About...")
-menubar.add_cascade(label = "書式(O)", menu = formatmenu)
+# formatmenu = tk.Menu(menubar, tearoff = 0)
+# formatmenu.add_command(label = "About...")
+# menubar.add_cascade(label = "書式(O)", menu = formatmenu)
 
-viewmenu = tk.Menu(menubar, tearoff = 0)
-viewmenu.add_command(label = "About...")
-menubar.add_cascade(label = "表示(V)", menu = viewmenu)
+# viewmenu = tk.Menu(menubar, tearoff = 0)
+# viewmenu.add_command(label = "About...")
+# menubar.add_cascade(label = "表示(V)", menu = viewmenu)
 
-helpmenu = tk.Menu(menubar, tearoff = 0)
-helpmenu.add_command(label = "About...")
-menubar.add_cascade(label = "ヘルプ(H)", menu = helpmenu)
+# helpmenu = tk.Menu(menubar, tearoff = 0)
+# helpmenu.add_command(label = "About...")
+# menubar.add_cascade(label = "ヘルプ(H)", menu = helpmenu)
 
 root.config(menu = menubar)
 yscroll = tk.Scrollbar(text_widget, command=text_widget.yview)
@@ -92,7 +88,7 @@ root.rowconfigure(0, weight=1)
 
 
 firstTitle="blank.txt"
-
+title=firstTitle
 root.title(firstTitle)
 root.geometry("500x250")
 root.mainloop()
